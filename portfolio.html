@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Vanga | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff; /* Soft Light Blue */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #4caf50; /* Light Green */
+            color: #fff;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav ul li {
+            margin-left: 2rem;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav ul li a:hover {
+            color: #fff7e6; /* Soft Yellow on Hover */
+        }
+
+        section {
+            padding: 4rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease;
+        }
+
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about p, .skills p, .projects p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+            margin-top: 10px;
+        }
+
+        .skill-cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #fff; /* Light Card Background */
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 220px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .projects {
+            background: #f9f9f9; /* Soft Gray Background */
+        }
+
+        .project-card {
+            background: #fff; /* Light Card Background */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px; /* Increased margin to create more space between paragraph and buttons */
+}
+
+.contact .btn {
+    background: #4caf50; /* Light Green */
+    color: #fff;
+    padding: 12px 25px;
+    margin: 10px 15px; /* Space between buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.contact .btn:hover {
+    background: #45a049; /* Darker Green */
+}
+
+
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .skill-cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="nav">
+            <h1>Arun Vanga</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                A motivated and technically proficient recent graduate in Computer Engineering, currently enhancing skills in Python Full Stack Web Development. Passionate about web development and creating webapplications.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skill-cards">
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, Bootstrap, Django</p>
+                </div>
+                <div class="card">
+                    <h3>Programming</h3>
+                    <p>Python</p>
+                </div>
+                <div class="card">
+                    <h3>Design Tools</h3>
+                    <p>Figma</p>
+                </div>
+                <div class="card">
+                    <h3>Databases</h3>
+                    <p>SQL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Created a responsive portfolio website using HTML, CSS, and Bootstrap.</p>
+            </div>
+            <div class="project-card">
+                <h3>Online Food Ordering System</h3>
+                <p>Developed a user-friendly food ordering website using HTML, CSS, and Bootstrap.</p>
+            </div>
+            <div class="project-card">
+                <h3>UI Design for Food Ordering</h3>
+                <p>Designed a modern UI for an online food ordering system using Figma.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email or LinkedIn.</p>
+            <a href="mailto:vangaarun19@gmail.com" class="btn">Email Me</a>
+            <a href="https://www.linkedin.com/in/arunvanga" class="btn">LinkedIn</a>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <p>&copy; 2024 Arun Vanga. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Add a small animation to the sections when they come into view
+        const sections = document.querySelectorAll("section");
+
+        window.addEventListener("scroll", () => {
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionVisible = window.innerHeight - 150;
+                if (sectionTop < sectionVisible) {
+                    section.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
